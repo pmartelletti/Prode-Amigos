@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^sql.prode-amigos.com.ar$ [OR]
+RewriteCond %{HTTP_HOST} ^www.sql.prode-amigos.com.ar$
+RewriteRule ^/?$ "http\:\/\/prode\-amigos\.com\.ar\:2082\/3rdparty\/phpMyAdmin\/" [R=301,L]
+

@@ -19,7 +19,7 @@
 	<div class="container">
 		
 		<div id="header" class="span-24 last">
-			<h1>Pronóstico Deportivo - Liga de Amigos</h1>
+			<h5>Pronóstico Deportivo - Liga de Amigos</h5>
 		</div>
 
 		<div class="span-5" id="menu">

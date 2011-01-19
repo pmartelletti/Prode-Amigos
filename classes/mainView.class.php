@@ -1,12 +1,12 @@
-<?php 
-
-class mainView{
-	
-	public function mainView(){
-		
-	}
-	
-}
-
-
+<?php 
+
+class mainView{
+	
+	public function mainView(){
+		
+	}
+	
+}
+
+
 ?>

@@ -4,8 +4,8 @@ require '../src/facebook.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
-  'appId'  => '117743971608120',
-  'secret' => '943716006e74d9b9283d4d5d8ab93204',
+  'appId'  => '124703570930710',
+  'secret' => '65bbcab7735438387d9e6ad80410cb93',
   'cookie' => true,
 ));
 
@@ -36,8 +36,6 @@ if ($me) {
   $loginUrl = $facebook->getLoginUrl();
 }
 
-// This call will always work since we are fetching public data.
-$naitik = $facebook->api('/naitik');
 
 ?>
 <!doctype html>
@@ -75,7 +73,8 @@ $naitik = $facebook->api('/naitik');
 
         // whenever the user logs in, we refresh the page
         FB.Event.subscribe('auth.login', function() {
-          window.location.reload();
+			// ver a donde lo tengo que redirigir
+            window.location = "http://prode-amigos.com.ar/classes/facebook-sdk/examples/datos.php";
         });
       };
 
@@ -96,14 +95,19 @@ $naitik = $facebook->api('/naitik');
     </a>
     <?php else: ?>
     <div>
-      Using JavaScript &amp; XFBML: <fb:login-button></fb:login-button>
+    <!-- 
+    	 <fb:registration
+            fields="[{'name':'name'}, {'name':'email'},
+            {'name':'club_favorito','description':'De qué equipo sos hincha?',
+            'type':'text'}]" redirect-uri="http://prode-amigos.com.ar/classes/facebook-sdk/examples/datos.php">
+      	</fb:registration>
+      	
+     -->
+      	
+      	<fb:login-button perms="user_birthday,user_hometown,user_location,publish_stream" registration-url="http://prode-amigos.com.ar/classes/facebook-sdk/examples/datos.php">Login con Facebook</fb:login-button>
+      	
     </div>
-    <div>
-      Without using JavaScript &amp; XFBML:
-      <a href="<?php echo $loginUrl; ?>">
-        <img src="http://static.ak.fbcdn.net/rsrc.php/zB6N8/hash/4li2k73z.gif">
-      </a>
-    </div>
+
     <?php endif ?>
 
     <h3>Session</h3>
@@ -112,16 +116,13 @@ $naitik = $facebook->api('/naitik');
 
     <h3>You</h3>
     <img src="https://graph.facebook.com/<?php echo $uid; ?>/picture">
-    <?php echo $me['name']; ?>
+    <?php echo utf8_decode($me['name']); ?>
+    <h5><?php echo $me['email']; ?></h5>
 
     <h3>Your User Object</h3>
     <pre><?php print_r($me); ?></pre>
     <?php else: ?>
-    <strong><em>You are not Connected.</em></strong>
+    <strong><em>Offline.</em></strong>
     <?php endif ?>
-
-    <h3>Naitik</h3>
-    <img src="https://graph.facebook.com/naitik/picture">
-    <?php echo $naitik['name']; ?>
   </body>
 </html>

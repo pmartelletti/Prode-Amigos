@@ -1,6 +1,8 @@
 <?php
 
 require_once 'classes/Usuarios.php';
+require_once 'classes/RegistrationView.class.php';
+require_once 'classes/facebook-sdk/src/FacebookRequest.class.php';
 
 class LoginController {
 	
@@ -8,22 +10,28 @@ class LoginController {
 		
 	}
 	
-	public function getView($view){
+	public function getView($view=""){
 		
 		switch ($view){
-			case "loginView":
-				return $this->getDefaultView();
+			case "registration":
+				return $this->getRegistrationView();
 				
 			default:
-				return ;
+				return $this->getDefaultView();
 		} 
 		
 	}
 	
+	private function getRegistrationView(){
+		$view = new RegistrationView();
+		$view->setDisplayOptions();
+		return $view->getDisplay();
+	}
+	
 	private function getDefaultView(){
-		
-		
-		
+		$login = new LoginView();
+		$login->setDisplayOptions();
+		return $login->getDisplay();		
 	}
 	
 	public function makeAsyncRequest($action){
@@ -34,10 +42,27 @@ class LoginController {
 				
 				return $this->systemLogin();
 				
-			default:
+			case "procesarRegistracion":
+				$this->procesaRegistracion();
+				return;
 				
+			default:
+
 				return;
 		}
+		
+	}
+	
+	private function procesaRegistracion(){
+		// ver si vino la respuesta del servidor
+		$fb_request = new FacebookRequest();
+		$info = $fb_request->getRequestData();
+		if( $fb_request->facebookRegister() ){
+			echo "Registracion de facebook";
+		} else {
+			echo "Registración normal";
+		}
+		
 		
 	}
 	

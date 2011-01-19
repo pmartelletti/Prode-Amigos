@@ -14,8 +14,10 @@ class DataObjects_Usuarios extends DB_DataObject
     public $us_nombre;                       // varchar(255)   not_null
     public $us_login;                        // varchar(20)   not_null
     public $us_email;                        // varchar(90)   not_null
-    public $us_pass;                         // varchar(10)   not_null
+    public $us_pass;                         // varchar(90)   null
     public $us_fecha_alta;                   // date   not_null
+    public $us_fb_login;					 // tinyint(1) null
+    public $us_fb_id;						 // int(20) not_null
 
     /* Static get */
     function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('DataObjects_Usuarios',$k,$v); }
