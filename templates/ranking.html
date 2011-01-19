@@ -1,0 +1,54 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tabs").tabs();
+	})
+</script>
+<div id="tabs">
+	<ul>
+		<li><a href="#fecha">Ranking de la Fecha</a></li>
+		<li><a href="#general">Ranking General</a></li>
+	</ul>
+	
+	<div id="fecha">
+		
+		<table id="tableFecha">
+			<thead>
+				<tr>
+					<th>Posicion</th>
+					<th>Usuario</th>
+					<th>Puntos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr flexy:foreach="equiposFechaActual,pos,object">
+					<td>{pos}</td>
+					<td>{getProperty(object,#_ap_us_id.us_nombre#)} ({getProperty(object,#_ap_us_id.us_login#)})</td>
+					<td>{getProperty(object,#ap_puntaje#)}</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	
+	<div id="general">
+		
+		<table id="tableGeneral">
+			<thead>
+				<tr>
+					<th>Posicion</th>
+					<th>Usuario</th>
+					<th>Puntos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr flexy:foreach="equiposTorneo,pos,object">
+					<td>{pos}</td>
+					<td>{getProperty(object,#_ap_us_id.us_nombre#)} ({getProperty(object,#_ap_us_id.us_login#)})</td>
+					<td>{getProperty(object,#ap_puntaje#)}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	
+</div>

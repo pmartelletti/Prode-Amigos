@@ -1,0 +1,6 @@
+a:1:{s:11:"elijeTorneo";O:27:"HTML_Template_Flexy_Element":8:{s:3:"tag";s:6:"select";s:10:"attributes";a:2:{s:2:"id";s:11:"elijeTorneo";s:4:"name";s:11:"elijeTorneo";}s:8:"children";a:9:{i:0;s:4:"
+		";i:1;O:27:"HTML_Template_Flexy_Element":8:{s:3:"tag";s:6:"option";s:10:"attributes";a:0:{}s:8:"children";a:1:{i:0;s:14:"Cambiar Torneo";}s:8:"override";b:0;s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"value";N;s:5:"label";N;}i:2;s:4:"
+		";i:3;O:27:"HTML_Template_Flexy_Element":8:{s:3:"tag";s:6:"option";s:10:"attributes";a:0:{}s:8:"children";a:1:{i:0;s:13:"Clausura 2010";}s:8:"override";b:0;s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"value";N;s:5:"label";N;}i:4;s:4:"
+		";i:5;O:27:"HTML_Template_Flexy_Element":8:{s:3:"tag";s:6:"option";s:10:"attributes";a:0:{}s:8:"children";a:1:{i:0;s:13:"Apertura 2010";}s:8:"override";b:0;s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"value";N;s:5:"label";N;}i:6;s:4:"
+		";i:7;O:27:"HTML_Template_Flexy_Element":8:{s:3:"tag";s:6:"option";s:10:"attributes";a:0:{}s:8:"children";a:1:{i:0;s:16:"Preparacion 2011";}s:8:"override";b:0;s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"value";N;s:5:"label";N;}i:8;s:3:"
+	";}s:8:"override";b:0;s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"value";N;s:5:"label";N;}}

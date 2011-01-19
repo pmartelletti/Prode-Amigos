@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+
+#login {
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.ui-icon {
+	float:left;
+	margin-right: 0.3em;
+}
+
+body {
+	font-family: 'Ubuntu', arial, serif;
+	font-size: 13px;
+}
+
+#header h1 {
+	font-family: 'Lobster', arial, serif; 
+	font-size: 50px;
+	text-align: center;
+}
+
+#header {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid grey;
+}
+
+#menu ul {
+	list-style-type: none;
+	padding-left: 0;
+	
+}
+
+#menu h4 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#content h3 {
+	text-align: center;
+}
+
+table#proxima_fecha {
+	width: 650px;
+	margin: 0 auto;
+	border: 1px solid grey;
+}
+
+#fecha_pasada {
+	margin-top: 20px;
+}
+
+table#proxima_fecha tr td, table#proxima_fecha tr th {
+	text-align: center;
+}
+
+#content h5 {
+	text-align:right;
+	font-weight: bold;
+}
+
+#footer {
+	border-top: 1px solid grey;
+	padding-top: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+}
+
+.nota {
+	margin-top: 15px;
+	font-size: 11px;
+	font-style: italic;
+}
+
+#fecha_pasada {
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+#fecha_pasada {
+	background-color: #e4ebf3;
+}
+
+#fecha_pasada p {
+	color: #68a1bf;
+}
+
+#fecha_pasada p b {
+	color: #5e819f;
+}
+
+.tableLeft {
+	float: left;
+	width: 49%;
+	margin-right: 10px;
+}
+
+.tableRight {
+	float: left;
+	width: 49%;
+}
+
+.tableRight table th, .tableLeft table th {
+	text-align: right;
+}
+
+#cambiaTorneo {
+	text-align:right;
+}

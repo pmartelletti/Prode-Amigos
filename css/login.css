@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+#login {
+	border: 1px solid #b5b5b5;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+#formLogin {
+	margin: 10px 60px;
+}
+
+#formLogin label {
+	margin-right: 10em;
+}
+
+span.error {
+	background-color: white;
+	border: none;
+	padding: 0;
+}

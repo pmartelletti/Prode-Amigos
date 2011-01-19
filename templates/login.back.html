@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		// proceso el login
+		$("#sendLogin").button().click(function(){
+			var datos = $("#loginForm").serializeArray();
+			$.post("index.php?action=login", datos, function(response){
+				var responseDiv = $("#response");
+				if(response.statusCode == "100"){
+					var respuesta = "<span class='ui-icon ui-icon-check'></span>" + response.statusMsg;
+					responseDiv.addClass("success").html(respuesta);
+					setTimeout('window.location = "index.php"',1000);
+					 
+				} else {
+					var respuesta = "<span class='ui-icon ui-icon-alert'></span>" + response.statusMsg;
+					responseDiv.addClass("error").html(respuesta);
+				}
+			}, "json");
+		})
+	})
+</script>
+
+<div class="span-3">&nbsp;</div>
+<div id="login" class="span-11 last">
+	<form id="loginForm" action="#">
+		<fieldset>
+			<h4>Login del Usuario</h4>
+			<p>
+				<label for="us_login">Usuario: </label>
+				<input type="text" name="us_login" id="us_login" style="width:200px">
+			</p>
+			
+			<p>
+				<label for="us_pass">Password: </label>
+				<input type="password" name="us_pass" id="us_pass" style="width:200px">
+			</p>
+			<p><input type="button" name="sendLogin" id="sendLogin" value="Entrar al Prode"></p>
+			
+			<div id="response"></div>
+		</fieldset>
+	</form>
+</div>
